@@ -1,0 +1,19 @@
+/*
+Project Onome
+Responsive Stylesheet File
+(C) 2017-2018 Ivan S. All rights reserved.
+*/
+
+/* Fixing width on 1080p resolution */
+
+@media only screen and (max-width: 1920px) {
+    #onomecpl_HeaderBar {
+        max-width: 75% !important;
+    }
+    #onomecpl_Content {
+        max-width: 75% !important;
+    }
+    #onomecpl_DevicesControllers {
+        width: 400px !important;
+    }
+}

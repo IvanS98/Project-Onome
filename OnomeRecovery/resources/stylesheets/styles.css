@@ -1,0 +1,44 @@
+/*
+Project Onome
+Styles Stylesheet File
+(C) 2017-2018 Ivan S. All rights reserved.
+*/
+
+a {
+    color: white;
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: 0.2s;
+}
+
+a:hover {
+    color: #59b4ec;
+    text-decoration: none;
+}
+
+h1 {
+    font-weight: 700;
+    letter-spacing: -2.5px;
+}
+
+h3 {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.activity_title {
+        color: #b9b9b9;
+        font-size: 28px;
+        padding: 0;
+        margin: 0;
+        font-weight: 700;
+        letter-spacing: -2.0px;
+}
+.activity_subtitle {
+        color: #b9b9b9;
+        font-size: 20px;
+        padding: 0;
+        margin: 0;
+        padding-top: 20px;
+        font-weight: 600;
+}

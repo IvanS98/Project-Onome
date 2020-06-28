@@ -1,0 +1,29 @@
+#-*- coding: utf-8 -*-
+import RPi.GPIO as GPIO
+import dht11
+import os.path
+import time
+temp_path = '/var/www/html/OnomeWeb/resources/scripts/status/temphum/temp_status'
+hum_path = '/var/www/html/OnomeWeb/resources/scripts/status/temphum/hum_status'
+degree = unichr(176)
+
+# initialize GPIO
+GPIO.setwarnings(False)
+GPIO.setmode(GPIO.BCM)
+GPIO.cleanup()
+
+# read data using pin 14
+instance = dht11.DHT11(pin=22)
+
+while True:
+    result = instance.read()
+    if result.is_valid():
+        print("Temperature: %d C" % result.temperature)
+        print("Humidity: %d %%" % result.humidity)
+	with open(temp_path, 'w') as tf:
+		tf.write("%d°C" % result.temperature)
+		tf.close
+	with open(hum_path, 'w') as hf:
+		hf.write("Humidity %d%%" % result.humidity)
+		tf.close
+    time.sleep(1800)
